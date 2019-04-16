@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <project name="Gardemarine.prebuild" default="prebuild" basedir=".">
+   
+      <target name ="prebuild" description="Update build number for the Gardemarine project">
+      
+      	<buildnumber/>
+         
+      	<concat append="false" destfile="generated/ru/dz/shipMaster/Build.java" >
+      		<header id="hrd">package ru.dz.shipMaster;
+
+public class Build 
+{
+      				
+    /**
+     * Build number.
+     */
+    public static final String BUILD = "${build.number}"; 
+}
+      		</header>
+  
+      		<filelist></filelist>
+      	</concat>
+     
+      	<eclipse.refreshLocal resource="ShipMaster/generated" depth="infinite" />
+     
+      </target>
+      
+</project>

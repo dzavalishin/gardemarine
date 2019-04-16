@@ -1,5 +1,7 @@
 # Compiled class file
 *.class
+classic/bin 
+new_ui/bin
 
 # Log file
 *.log
